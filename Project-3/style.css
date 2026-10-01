@@ -1,0 +1,414 @@
+/* ================================
+   GENERAL STYLES
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.header h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.header p {
+    font-size: 18px;
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   BILLING TOGGLE
+================================ */
+
+.billing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.billing-toggle span {
+    color: #6b7280;
+}
+
+.billing-toggle .active {
+    color: #111827;
+}
+
+
+/* Toggle Switch */
+
+.switch {
+    position: relative;
+    width: 56px;
+    height: 30px;
+    display: inline-block;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* Slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #d1d5db;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 4px;
+    top: 4px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Toggle Active */
+
+.switch input:checked + .slider {
+    background: #6366f1;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+
+/* Save Badge */
+
+.save-badge {
+    background: #dcfce7 !important;
+    color: #15803d !important;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+
+/* ================================
+   PRICING CONTAINER
+================================ */
+
+.pricing-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* ================================
+   PRICING CARD
+================================ */
+
+.pricing-card {
+    position: relative;
+    background: white;
+    border-radius: 18px;
+    padding: 35px 30px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+    overflow: hidden;
+}
+
+
+/* Hover Effect */
+
+.pricing-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: #6366f1;
+}
+
+
+/* ================================
+   POPULAR CARD
+================================ */
+
+.pricing-card.popular {
+    border: 2px solid #6366f1;
+    transform: scale(1.03);
+}
+
+.pricing-card.popular:hover {
+    transform: scale(1.03) translateY(-12px);
+}
+
+
+/* ================================
+   RIBBON
+================================ */
+
+.ribbon {
+    position: absolute;
+    top: 18px;
+    right: -35px;
+
+    width: 150px;
+
+    padding: 7px 0;
+
+    text-align: center;
+
+    background: #6366f1;
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transform: rotate(45deg);
+}
+
+
+/* ================================
+   CARD CONTENT
+================================ */
+
+.card-content h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.description {
+    color: #6b7280;
+    line-height: 1.5;
+    min-height: 48px;
+}
+
+
+/* ================================
+   PRICE
+================================ */
+
+.price {
+    margin: 25px 0;
+    display: flex;
+    align-items: baseline;
+}
+
+.currency {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.amount {
+    font-size: 52px;
+    font-weight: 700;
+    color: #111827;
+
+    transition: opacity 0.2s ease;
+}
+
+.period {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.plan-button {
+    width: 100%;
+    padding: 14px;
+
+    border: 2px solid #6366f1;
+    border-radius: 10px;
+
+    background: white;
+    color: #6366f1;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease;
+}
+
+
+.plan-button:hover {
+    background: #6366f1;
+    color: white;
+    transform: scale(1.03);
+}
+
+
+/* Primary Button */
+
+.plan-button.primary {
+    background: #6366f1;
+    color: white;
+}
+
+
+.plan-button.primary:hover {
+    background: #4f46e5;
+}
+
+
+/* ================================
+   DIVIDER
+================================ */
+
+.divider {
+    height: 1px;
+    background: #e5e7eb;
+    margin: 28px 0;
+}
+
+
+/* ================================
+   FEATURES
+================================ */
+
+.card-content h3 {
+    font-size: 15px;
+    margin-bottom: 18px;
+    color: #374151;
+}
+
+.card-content ul {
+    list-style: none;
+}
+
+.card-content li {
+    margin-bottom: 14px;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    text-align: center;
+    padding: 50px 20px 30px;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .pricing-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-card.popular {
+        transform: none;
+    }
+
+    .pricing-card.popular:hover {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .header {
+        padding-top: 40px;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    .billing-toggle {
+        flex-wrap: wrap;
+    }
+
+    .pricing-container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .pricing-card {
+        padding: 30px 25px;
+    }
+
+    .pricing-card.popular {
+        transform: none;
+    }
+
+    .pricing-card:hover,
+    .pricing-card.popular:hover {
+        transform: translateY(-8px);
+    }
+
+    .amount {
+        font-size: 45px;
+    }
+
+}
