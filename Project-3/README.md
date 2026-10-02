@@ -8,7 +8,7 @@ This project demonstrates commercial UI design practices with interactive billin
 
 ## 🚀 Live Demo
 
-🔗 **Live Demo:** Add your Netlify link here
+🔗 **Live Demo:** https://pricing-cards-lemon.vercel.app/
 
 ---
 
